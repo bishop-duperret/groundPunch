@@ -1,19 +1,55 @@
 <div [@routerTransition]>
     <h2 class="text-muted">Dashboard <small>Statistics Overview</small></h2>
     <div class="row">
-        <div class="col-md-12">
-            <ngb-carousel>
-                <ng-template ngbSlide *ngFor="let slider of sliders">
-                    <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
-                    <div class="carousel-caption">
-                        <h3>{{slider.label}}</h3>
-                        <p>{{slider.text}}</p>
-                    </div>
-                </ng-template>
-            </ngb-carousel>
-        </div>
+        <div class="jumbotron">
+  <h1>Mural Migration Console</h1>
+  <p>Here you will be able to keep track of migration progress, errors, 
+      newly assigned projects, and support tickets
+  </p>
+     
+</div>
     </div>
     <hr>
+   <div class="card mb-3">
+                <div class="card-header">
+                   Nearing Completion
+                </div>
+               
+    <div class="row">
+     <div class="card mb-3">
+                <div class="card-header">
+                    FloorKart
+                </div>
+                <div class="card-block12">
+                    <canvas baseChart height="140px" [data]="doughnutChartData"  [colors]="doughnutChartColors" [labels]="doughnutChartLabels"[options]="doughnutChartOptions" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                   
+                    </canvas>
+                </div>
+        </div>
+   
+         <div class="card mb-3">
+                <div class="card-header">
+                    Macrohard 
+                </div>
+                <div class="card-block12">
+                    <canvas baseChart height="140px" [data]="doughnutChartData"  [colors]="doughnutChartColors" [labels]="doughnutChartLabels"[options]="doughnutChartOptions" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                   
+                    </canvas>
+                </div>
+         </div>
+    
+         <div class="card mb-3">
+                <div class="card-header">
+                    McArnolds Test Inc
+                </div>
+                <div class="card-block12">
+                    <canvas baseChart height="140px" [data]="doughnutChartData"  [colors]="doughnutChartColors" [labels]="doughnutChartLabels"[options]="doughnutChartOptions" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                   
+                    </canvas>
+                </div>
+     </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-xl-3 col-lg-6">
             <app-stat [bgClass]="'card-primary'" [icon]="'fa-comments'" [count]="26" [label]="'New Comments!'" ></app-stat>

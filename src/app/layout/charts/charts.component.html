@@ -20,8 +20,9 @@
                 <div class="card-header">
                     Doughnut Chart
                 </div>
-                <div class="card-block">
-                    <canvas baseChart height="180px" [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                <div class="card-block12">
+                    <canvas baseChart height="140px" [data]="doughnutChartData"  [colors]="doughnutChartColors" [labels]="doughnutChartLabels"[options]="doughnutChartOptions" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                   
                     </canvas>
                 </div>
             </div>
