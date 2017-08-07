@@ -3,12 +3,12 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {
   TimelineComponent,
-  NotificationComponent,
+  NotificationComponent, 
   ChatComponent
 } from './components';
 import { StatModule } from '../../shared';
 import { DashboardComponent } from './dashboard.component';
-
+ 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
@@ -24,6 +24,7 @@ describe('DashboardComponent', () => {
         DashboardComponent,
         TimelineComponent,
         NotificationComponent,
+     
         ChatComponent
       ]
     })

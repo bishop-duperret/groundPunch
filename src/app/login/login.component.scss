@@ -1,4 +1,4 @@
-$topnav-background-color: #222;
+$topnav-background-color: #1ebdac;
 :host {
     display: block;
 }
@@ -83,8 +83,8 @@ $topnav-background-color: #222;
         padding: 40px 0;
     }
     .user-avatar {
-        -webkit-border-radius: 50%;
-                border-radius: 50%;
+        -webkit-border-radius: 70%;
+                border-radius: 70%;
         border: 2px solid #FFF;
     }
 }

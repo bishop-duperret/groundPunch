@@ -4,15 +4,24 @@ import {
     NgbCarouselModule,
     NgbAlertModule
 } from '@ng-bootstrap/ng-bootstrap';
+import { ChartsModule as Ng2Charts } from 'ng2-charts';
+ 
 
+      
+
+import { MigrationDetailComponent } from '../../shared/components/Migrations/migration-detail.component';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
+ 
 import {
     TimelineComponent,
     NotificationComponent,
+    
     ChatComponent
 } from './components';
+
+ 
 import { StatModule } from '../../shared';
 
 @NgModule({
@@ -21,12 +30,15 @@ import { StatModule } from '../../shared';
         NgbCarouselModule.forRoot(),
         NgbAlertModule.forRoot(),
         DashboardRoutingModule,
-        StatModule,
+        StatModule,Ng2Charts
     ],
     declarations: [
         DashboardComponent,
         TimelineComponent,
         NotificationComponent,
+        MigrationDetailComponent,
+  
+         
         ChatComponent
     ]
 })

@@ -16,4 +16,4 @@ import { PageHeaderModule } from '../../shared';
     declarations: [ChartsComponent],
     exports: [ChartsComponent]
 })
-export class ChartsModule { }
+export class DoughtnutChartModule { }

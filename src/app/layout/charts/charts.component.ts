@@ -21,10 +21,19 @@ export class ChartsComponent implements OnInit {
         { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
         { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
     ];
+    
     // Doughnut
-    public doughnutChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-    public doughnutChartData: number[] = [350, 450, 100];
+    public doughnutChartLabels: string[] = ['Complete', 'Pending', 'Error'];
+    public doughnutChartData: number[] = [350, 100, 25];
     public doughnutChartType: string = 'doughnut';
+     public doughnutChartOptions: any = {
+         cutoutPercentage: 85
+     }
+    public doughnutChartColors: Array<any> = [{
+        backgroundColor:["#96ef73", "#f9f772", "#f40000", "#FFFCC4", "#B9E8E0"] 
+      },
+     { borderColor:["#26b721", "#f9f772", "#f40000", "#FFFCC4", "#B9E8E0"] }
+    ];
     // Radar
     public radarChartLabels: string[] = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];
     public radarChartData: any = [
@@ -54,7 +63,7 @@ export class ChartsComponent implements OnInit {
     };
     public lineChartColors: Array<any> = [
         { // grey
-            backgroundColor: 'rgba(148,159,177,0.2)',
+            backgroundColor: '#ff3333',
             borderColor: 'rgba(148,159,177,1)',
             pointBackgroundColor: 'rgba(148,159,177,1)',
             pointBorderColor: '#fff',
@@ -62,7 +71,7 @@ export class ChartsComponent implements OnInit {
             pointHoverBorderColor: 'rgba(148,159,177,0.8)'
         },
         { // dark grey
-            backgroundColor: 'rgba(77,83,96,0.2)',
+            backgroundColor:'#ff3333',
             borderColor: 'rgba(77,83,96,1)',
             pointBackgroundColor: 'rgba(77,83,96,1)',
             pointBorderColor: '#fff',
@@ -70,7 +79,7 @@ export class ChartsComponent implements OnInit {
             pointHoverBorderColor: 'rgba(77,83,96,1)'
         },
         { // grey
-            backgroundColor: 'rgba(148,159,177,0.2)',
+            backgroundColor: '#ff3333',
             borderColor: 'rgba(148,159,177,1)',
             pointBackgroundColor: 'rgba(148,159,177,1)',
             pointBorderColor: '#fff',
